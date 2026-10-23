@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+<div class="container">
+    <header>
+        <h1>My Finance Tracker</h1>
+        <p>Track your money. Take control.</p>
+    </header>
+
+    <section class="summary">
+        <div class="summary-card">
+            <h2>Total Balance</h2>
+            <p id="balance">R0.00</p>
+        </div>
+
+        <div class="summary-card">
+            <h2>Income</h2>
+            <p id="income">R0.00</p>
+        </div>
+
+        <div class="summary-card">
+            <h2>Expenses</h2>
+            <p id="expenses">R0.00</p>
+        </div>
+    </section>
+
+    <section class="transaction-form">
+        <h2>Add a Transaction</h2>
+
+        <form id="transactionForm">
+            <input
+                type="text"
+                id="description"
+                placeholder="What was the transaction?"
+                required
+            >
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Amount (R)"
+                min="0.01"
+                step="0.01"
+                required
+            >
+
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <button type="submit">Add Transaction</button>
+        </form>
+    </section>
+
+    <section class="transaction-list">
+        <h2>Recent Transactions</h2>
+
+        <ul id="transactionList">
+            <!-- Transactions will appear here -->
+        </ul>
+    </section>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

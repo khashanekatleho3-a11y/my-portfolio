@@ -1,0 +1,140 @@
+
+/* 1. Set the basic rules for every element */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Style the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f6;
+    color: #263238;
+    padding: 30px 16px;
+}
+
+/* 3. Control the main content width */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 4. Style the heading area */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #176b52;
+}
+
+header p {
+    color: #66736f;
+}
+
+/* 5. Arrange the summary cards */
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.summary-card h2 {
+    font-size: 15px;
+    color: #66736f;
+    margin-bottom: 12px;
+}
+
+.summary-card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #176b52;
+}
+
+/* 6. Style the form and transaction sections */
+.transaction-form,
+.transaction-list {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.transaction-form h2,
+.transaction-list h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+/* 7. Arrange the form fields */
+#transactionForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#transactionForm input,
+#transactionForm select {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px;
+    border: 1px solid #d5ded9;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* 8. Style the button */
+#transactionForm button {
+    background: #176b52;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#transactionForm button:hover {
+    background: #10523e;
+}
+
+/* 9. Style the transaction list */
+#transactionList {
+    list-style: none;
+}
+
+#transactionList li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #edf0ee;
+}
+
+/* 10. Adjust the layout for small screens */
+@media (max-width: 600px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+}
