@@ -81,3 +81,72 @@ h1{
     text-decoration: line-through;
     opacity: 0.6;
 }
+
+
+/* 🎀 Pink Task Manager Theme */
+
+body {
+    background: linear-gradient(
+        -45deg,
+        #ffe0ec,
+        #ffc0d9,
+        #f8a5c2,
+        #fff0f5
+    );
+    background-size: 400% 400%;
+    animation: pinkBackground 12s ease infinite;
+    min-height: 100vh;
+}
+
+@keyframes pinkBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Pink task box */
+.task-container {
+    background: rgba(255, 255, 255, 0.88);
+    border: 2px solid #ffb6d0;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(214, 51, 108, 0.15);
+    padding: 25px;
+}
+
+/* Pink buttons */
+button {
+    background-color: #ec4899;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #db2777;
+}
+
+
+
+/* Add space between task text and buttons */
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+li button {
+    margin-left: 8px;
+}
+
+
+/* Blue Task Manager heading */
+h1 {
+    color: #041740;
+}
